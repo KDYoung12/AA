@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,9 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI textGoal;
 
     public int goal;
+
+    [SerializeField]
+    private GameObject btnRetry;
 
     [SerializeField]
     private Color green;
@@ -57,6 +61,18 @@ public class GameManager : MonoBehaviour
             isGameOver = true;
 
             Camera.main.backgroundColor = success ? green : red;
+
+            Invoke("ShowRetryButton", 0.7f); // 일정 시간 뒤에 함수를 호출해해주는 함수
         }
+    }
+
+    void ShowRetryButton()
+    {
+        btnRetry.SetActive(true);
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(0);
     }
 }

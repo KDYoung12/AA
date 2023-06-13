@@ -373,7 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGameOver: 0
   textGoal: {fileID: 61032550}
-  goal: 5
+  goal: 15
   green: {r: 0.21568628, g: 1, b: 0, a: 0}
   red: {r: 1, g: 0, b: 0.25490198, a: 0}
 --- !u!4 &779358526

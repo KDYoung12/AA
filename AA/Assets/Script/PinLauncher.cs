@@ -30,7 +30,7 @@ public class PinLauncher : MonoBehaviour
 
     void PreparePin()
     {
-        if (GameManager.instance.isGameOver == false)
+        if (GameManager.instance.goal > 1)
         {
             GameObject pin = Instantiate(pinObject, transform.position, Quaternion.identity);
             currPin = pin.GetComponent<Pin>();
